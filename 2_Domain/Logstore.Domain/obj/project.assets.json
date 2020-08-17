@@ -185,11 +185,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dev\\Logstore\\3_Infra\\Logstore.Infra\\Logstore.Infra.csproj",
-      "projectName": "Logstore.Infra",
-      "projectPath": "C:\\Users\\dev\\Logstore\\3_Infra\\Logstore.Infra\\Logstore.Infra.csproj",
+      "projectUniqueName": "C:\\Users\\dev\\Logstore\\2_Domain\\Logstore.Domain\\Logstore.Domain.csproj",
+      "projectName": "Logstore.Domain",
+      "projectPath": "C:\\Users\\dev\\Logstore\\2_Domain\\Logstore.Domain\\Logstore.Domain.csproj",
       "packagesPath": "C:\\Users\\Marcus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dev\\Logstore\\3_Infra\\Logstore.Infra\\obj\\",
+      "outputPath": "C:\\Users\\dev\\Logstore\\2_Domain\\Logstore.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

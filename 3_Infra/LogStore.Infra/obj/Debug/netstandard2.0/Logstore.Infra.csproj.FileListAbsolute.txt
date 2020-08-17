@@ -1,0 +1,9 @@
+C:\Users\dev\Logstore\3_Infra\Logstore.Infra\bin\Debug\netstandard2.0\Logstore.Infra.deps.json
+C:\Users\dev\Logstore\3_Infra\Logstore.Infra\bin\Debug\netstandard2.0\Logstore.Infra.dll
+C:\Users\dev\Logstore\3_Infra\Logstore.Infra\bin\Debug\netstandard2.0\Logstore.Infra.pdb
+C:\Users\dev\Logstore\3_Infra\Logstore.Infra\obj\Debug\netstandard2.0\Logstore.Infra.csprojAssemblyReference.cache
+C:\Users\dev\Logstore\3_Infra\Logstore.Infra\obj\Debug\netstandard2.0\Logstore.Infra.csproj.CoreCompileInputs.cache
+C:\Users\dev\Logstore\3_Infra\Logstore.Infra\obj\Debug\netstandard2.0\Logstore.Infra.AssemblyInfoInputs.cache
+C:\Users\dev\Logstore\3_Infra\Logstore.Infra\obj\Debug\netstandard2.0\Logstore.Infra.AssemblyInfo.cs
+C:\Users\dev\Logstore\3_Infra\Logstore.Infra\obj\Debug\netstandard2.0\Logstore.Infra.dll
+C:\Users\dev\Logstore\3_Infra\Logstore.Infra\obj\Debug\netstandard2.0\Logstore.Infra.pdb

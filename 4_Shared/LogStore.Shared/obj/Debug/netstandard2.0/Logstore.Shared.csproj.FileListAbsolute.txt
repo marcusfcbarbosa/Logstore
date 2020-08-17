@@ -1,0 +1,9 @@
+C:\Users\dev\Logstore\4_Shared\Logstore.Shared\bin\Debug\netstandard2.0\Logstore.Shared.deps.json
+C:\Users\dev\Logstore\4_Shared\Logstore.Shared\bin\Debug\netstandard2.0\Logstore.Shared.dll
+C:\Users\dev\Logstore\4_Shared\Logstore.Shared\bin\Debug\netstandard2.0\Logstore.Shared.pdb
+C:\Users\dev\Logstore\4_Shared\Logstore.Shared\obj\Debug\netstandard2.0\Logstore.Shared.csprojAssemblyReference.cache
+C:\Users\dev\Logstore\4_Shared\Logstore.Shared\obj\Debug\netstandard2.0\Logstore.Shared.csproj.CoreCompileInputs.cache
+C:\Users\dev\Logstore\4_Shared\Logstore.Shared\obj\Debug\netstandard2.0\Logstore.Shared.AssemblyInfoInputs.cache
+C:\Users\dev\Logstore\4_Shared\Logstore.Shared\obj\Debug\netstandard2.0\Logstore.Shared.AssemblyInfo.cs
+C:\Users\dev\Logstore\4_Shared\Logstore.Shared\obj\Debug\netstandard2.0\Logstore.Shared.dll
+C:\Users\dev\Logstore\4_Shared\Logstore.Shared\obj\Debug\netstandard2.0\Logstore.Shared.pdb

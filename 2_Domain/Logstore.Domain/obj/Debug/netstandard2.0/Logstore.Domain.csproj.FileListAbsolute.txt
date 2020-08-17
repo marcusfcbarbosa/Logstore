@@ -1,0 +1,9 @@
+C:\Users\dev\Logstore\2_Domain\Logstore.Domain\bin\Debug\netstandard2.0\Logstore.Domain.deps.json
+C:\Users\dev\Logstore\2_Domain\Logstore.Domain\bin\Debug\netstandard2.0\Logstore.Domain.dll
+C:\Users\dev\Logstore\2_Domain\Logstore.Domain\bin\Debug\netstandard2.0\Logstore.Domain.pdb
+C:\Users\dev\Logstore\2_Domain\Logstore.Domain\obj\Debug\netstandard2.0\Logstore.Domain.csprojAssemblyReference.cache
+C:\Users\dev\Logstore\2_Domain\Logstore.Domain\obj\Debug\netstandard2.0\Logstore.Domain.csproj.CoreCompileInputs.cache
+C:\Users\dev\Logstore\2_Domain\Logstore.Domain\obj\Debug\netstandard2.0\Logstore.Domain.AssemblyInfoInputs.cache
+C:\Users\dev\Logstore\2_Domain\Logstore.Domain\obj\Debug\netstandard2.0\Logstore.Domain.AssemblyInfo.cs
+C:\Users\dev\Logstore\2_Domain\Logstore.Domain\obj\Debug\netstandard2.0\Logstore.Domain.dll
+C:\Users\dev\Logstore\2_Domain\Logstore.Domain\obj\Debug\netstandard2.0\Logstore.Domain.pdb

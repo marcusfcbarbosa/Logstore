@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LogStore.Infra
+namespace Logstore.Infra
 {
     public class Class1
     {
