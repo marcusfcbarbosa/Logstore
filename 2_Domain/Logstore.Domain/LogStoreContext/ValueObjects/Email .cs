@@ -8,7 +8,6 @@ namespace Logstore.Domain.LogStoreContext.ValueObjects
         public Email(string address)
         {
             Address = address;
-            
         }
         public String Address { get; private set; }
     }
