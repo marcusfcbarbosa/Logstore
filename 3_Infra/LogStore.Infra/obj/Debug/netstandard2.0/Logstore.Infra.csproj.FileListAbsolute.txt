@@ -6,3 +6,8 @@ C:\Users\dev\Logstore\3_Infra\Logstore.Infra\obj\Debug\netstandard2.0\Logstore.I
 C:\Users\dev\Logstore\3_Infra\Logstore.Infra\obj\Debug\netstandard2.0\Logstore.Infra.AssemblyInfo.cs
 C:\Users\dev\Logstore\3_Infra\Logstore.Infra\obj\Debug\netstandard2.0\Logstore.Infra.dll
 C:\Users\dev\Logstore\3_Infra\Logstore.Infra\obj\Debug\netstandard2.0\Logstore.Infra.pdb
+C:\Users\dev\Logstore\3_Infra\Logstore.Infra\bin\Debug\netstandard2.0\Logstore.Domain.dll
+C:\Users\dev\Logstore\3_Infra\Logstore.Infra\bin\Debug\netstandard2.0\Logstore.Shared.dll
+C:\Users\dev\Logstore\3_Infra\Logstore.Infra\bin\Debug\netstandard2.0\Logstore.Domain.pdb
+C:\Users\dev\Logstore\3_Infra\Logstore.Infra\bin\Debug\netstandard2.0\Logstore.Shared.pdb
+C:\Users\dev\Logstore\3_Infra\Logstore.Infra\obj\Debug\netstandard2.0\Logstore.Infra.csproj.CopyComplete

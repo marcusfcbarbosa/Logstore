@@ -1752,6 +1752,49 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "Logstore.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "FluentValidator": "2.0.4",
+          "Logstore.Shared": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "2.2.4"
+        },
+        "compile": {
+          "bin/placeholder/Logstore.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Logstore.Domain.dll": {}
+        }
+      },
+      "Logstore.Infra/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Logstore.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "2.2.4",
+          "Microsoft.EntityFrameworkCore.Sqlite": "2.2.0"
+        },
+        "compile": {
+          "bin/placeholder/Logstore.Infra.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Logstore.Infra.dll": {}
+        }
+      },
+      "Logstore.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "FluentValidator": "2.0.4"
+        },
+        "compile": {
+          "bin/placeholder/Logstore.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Logstore.Shared.dll": {}
+        }
       }
     }
   },
@@ -5879,11 +5922,28 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "Logstore.Domain/1.0.0": {
+      "type": "project",
+      "path": "../../2_Domain/Logstore.Domain/Logstore.Domain.csproj",
+      "msbuildProject": "../../2_Domain/Logstore.Domain/Logstore.Domain.csproj"
+    },
+    "Logstore.Infra/1.0.0": {
+      "type": "project",
+      "path": "../../3_Infra/Logstore.Infra/Logstore.Infra.csproj",
+      "msbuildProject": "../../3_Infra/Logstore.Infra/Logstore.Infra.csproj"
+    },
+    "Logstore.Shared/1.0.0": {
+      "type": "project",
+      "path": "../../4_SHared/Logstore.Shared/Logstore.Shared.csproj",
+      "msbuildProject": "../../4_SHared/Logstore.Shared/Logstore.Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.0": [
       "FluentValidator >= 2.0.4",
+      "Logstore.Domain >= 1.0.0",
+      "Logstore.Infra >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 2.2.4",
       "Microsoft.EntityFrameworkCore.Sqlite >= 2.2.4"
     ]
@@ -5917,7 +5977,14 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\dev\\Logstore\\2_Domain\\Logstore.Domain\\Logstore.Domain.csproj": {
+              "projectPath": "C:\\Users\\dev\\Logstore\\2_Domain\\Logstore.Domain\\Logstore.Domain.csproj"
+            },
+            "C:\\Users\\dev\\Logstore\\3_Infra\\Logstore.Infra\\Logstore.Infra.csproj": {
+              "projectPath": "C:\\Users\\dev\\Logstore\\3_Infra\\Logstore.Infra\\Logstore.Infra.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

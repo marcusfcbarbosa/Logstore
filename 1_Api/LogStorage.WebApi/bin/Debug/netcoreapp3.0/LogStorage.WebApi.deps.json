@@ -25,6 +25,8 @@
       "LogStorage.WebApi/1.0.0": {
         "dependencies": {
           "FluentValidator": "2.0.4",
+          "Logstore.Domain": "1.0.0",
+          "Logstore.Infra": "1.0.0",
           "Microsoft.EntityFrameworkCore": "2.2.4",
           "Microsoft.EntityFrameworkCore.Sqlite": "2.2.4",
           "Microsoft.AspNetCore.Antiforgery": "3.0.0.0",
@@ -1416,6 +1418,43 @@
           "System.Text.Encoding": "4.3.0",
           "System.Threading": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0"
+        }
+      },
+      "Logstore.Domain/1.0.0": {
+        "dependencies": {
+          "FluentValidator": "2.0.4",
+          "Logstore.Shared": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "2.2.4"
+        },
+        "runtime": {
+          "Logstore.Domain.dll": {}
+        },
+        "compile": {
+          "Logstore.Domain.dll": {}
+        }
+      },
+      "Logstore.Infra/1.0.0": {
+        "dependencies": {
+          "Logstore.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "2.2.4",
+          "Microsoft.EntityFrameworkCore.Sqlite": "2.2.4"
+        },
+        "runtime": {
+          "Logstore.Infra.dll": {}
+        },
+        "compile": {
+          "Logstore.Infra.dll": {}
+        }
+      },
+      "Logstore.Shared/1.0.0": {
+        "dependencies": {
+          "FluentValidator": "2.0.4"
+        },
+        "runtime": {
+          "Logstore.Shared.dll": {}
+        },
+        "compile": {
+          "Logstore.Shared.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/3.0.0.0": {
@@ -3894,6 +3933,21 @@
       "sha512": "sha512-5zJ0XDxAIg8iy+t4aMnQAu0MqVbqyvfoUVl1yDV61xdo3Vth45oA2FoY4pPkxYAH5f8ixpmTqXeEIya95x0aCQ==",
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
+    },
+    "Logstore.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Logstore.Infra/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Logstore.Shared/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Microsoft.AspNetCore.Antiforgery/3.0.0.0": {
       "type": "referenceassembly",
