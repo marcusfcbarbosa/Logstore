@@ -11,13 +11,10 @@ namespace Logstore.Infra.Repositorys
          where TEntity : class, IEntity
     {
         private readonly LogStoreContext _context;
-
         public BaseRepository(LogStoreContext context)
         {
             _context = context;
         }
-
-
         public void Create(TEntity entity)
         {
             _context.Set<TEntity>().Add(entity);
