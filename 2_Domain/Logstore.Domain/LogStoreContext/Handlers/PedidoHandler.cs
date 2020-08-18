@@ -9,6 +9,9 @@ namespace Logstore.Domain.LogStoreContext.Handlers
     ICommandHandler<CriaPedidoCommand>
     {
         private readonly IPedidoRepository _pedidoRepository;
+        private readonly IClienteRepository _clienteRepository;
+        private readonly IProdutoRepository _produtoRepository;
+
         public PedidoHandler(IPedidoRepository pedidoRepository)
         {
             _pedidoRepository = pedidoRepository;

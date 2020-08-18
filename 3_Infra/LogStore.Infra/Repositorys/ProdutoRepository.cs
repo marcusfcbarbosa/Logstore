@@ -14,7 +14,6 @@ namespace Logstore.Infra.Repositorys
         {
             _context = context;
         }
-
         public async Task<Produto> RetornaProdutoPelaDescricao(string descricao)
         {
             IQueryable<Produto> query = _context.Produtos
