@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dev\\Logstore\\1_Api\\LogStorage.WebApi\\LogStorage.WebApi.csproj": {}
+    "C:\\Users\\dev\\Logstore\\1_api\\LogStorage.WebApi\\LogStorage.WebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dev\\Logstore\\1_Api\\LogStorage.WebApi\\LogStorage.WebApi.csproj": {
+    "C:\\Users\\dev\\Logstore\\1_api\\LogStorage.WebApi\\LogStorage.WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dev\\Logstore\\1_Api\\LogStorage.WebApi\\LogStorage.WebApi.csproj",
+        "projectUniqueName": "C:\\Users\\dev\\Logstore\\1_api\\LogStorage.WebApi\\LogStorage.WebApi.csproj",
         "projectName": "LogStorage.WebApi",
-        "projectPath": "C:\\Users\\dev\\Logstore\\1_Api\\LogStorage.WebApi\\LogStorage.WebApi.csproj",
+        "projectPath": "C:\\Users\\dev\\Logstore\\1_api\\LogStorage.WebApi\\LogStorage.WebApi.csproj",
         "packagesPath": "C:\\Users\\Marcus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dev\\Logstore\\1_Api\\LogStorage.WebApi\\obj\\",
+        "outputPath": "C:\\Users\\dev\\Logstore\\1_api\\LogStorage.WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

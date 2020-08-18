@@ -3,14 +3,16 @@ using System;
 using Logstore.Infra.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Logstore.Infra.Migrations
 {
     [DbContext(typeof(LogStoreContext))]
-    partial class LogStoreContextModelSnapshot : ModelSnapshot
+    [Migration("20200818195145_Adicionando quantidade ")]
+    partial class Adicionandoquantidade
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

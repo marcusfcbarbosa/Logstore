@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Logstore.Infra.Migrations
 {
     [DbContext(typeof(LogStoreContext))]
-    [Migration("20200818184136_init")]
+    [Migration("20200818194536_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -56,6 +56,8 @@ namespace Logstore.Infra.Migrations
 
                     b.Property<int>("Quantidade");
 
+                    b.Property<decimal>("ValorPedido");
+
                     b.Property<string>("identifyer")
                         .ValueGeneratedOnAdd()
                         .HasDefaultValueSql("lower(hex(randomblob(16)))");
@@ -79,8 +81,6 @@ namespace Logstore.Infra.Migrations
                     b.Property<string>("Descricao")
                         .HasMaxLength(100);
 
-                    b.Property<int?>("PedidoId");
-
                     b.Property<decimal>("Valor")
                         .HasColumnName("Valor");
 
@@ -90,9 +90,31 @@ namespace Logstore.Infra.Migrations
 
                     b.HasKey("Id");
 
+                    b.ToTable("Produto");
+                });
+
+            modelBuilder.Entity("Logstore.Domain.LogStoreContext.Entities.ProdutoPedido", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<DateTime>("CreatedAt");
+
+                    b.Property<int>("PedidoId");
+
+                    b.Property<int>("ProdutoId");
+
+                    b.Property<string>("identifyer")
+                        .ValueGeneratedOnAdd()
+                        .HasDefaultValueSql("lower(hex(randomblob(16)))");
+
+                    b.HasKey("Id");
+
                     b.HasIndex("PedidoId");
 
-                    b.ToTable("Produto");
+                    b.HasIndex("ProdutoId");
+
+                    b.ToTable("ProdutoPedido");
                 });
 
             modelBuilder.Entity("Logstore.Domain.LogStoreContext.Entities.Pedido", b =>
@@ -103,11 +125,17 @@ namespace Logstore.Infra.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("Logstore.Domain.LogStoreContext.Entities.Produto", b =>
+            modelBuilder.Entity("Logstore.Domain.LogStoreContext.Entities.ProdutoPedido", b =>
                 {
-                    b.HasOne("Logstore.Domain.LogStoreContext.Entities.Pedido")
-                        .WithMany("Produtos")
-                        .HasForeignKey("PedidoId");
+                    b.HasOne("Logstore.Domain.LogStoreContext.Entities.Pedido", "pedido")
+                        .WithMany("ProdutoPedidos")
+                        .HasForeignKey("PedidoId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Logstore.Domain.LogStoreContext.Entities.Produto", "produto")
+                        .WithMany("ProdutoPedidos")
+                        .HasForeignKey("ProdutoId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }

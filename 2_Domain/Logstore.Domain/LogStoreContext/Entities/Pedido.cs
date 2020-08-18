@@ -19,9 +19,11 @@ namespace Logstore.Domain.LogStoreContext.Entities
             this.status = Status.Realizado;
         }
         public int Quantidade { get; private set; }
+
+        public decimal ValorPedido { get; private set; }
         public bool FreteGratis { get; private set; } = false;
         public Status status { get; private set; }
-        public List<Produto> Produtos { get; set; }
+        public List<ProdutoPedido> ProdutoPedidos { get; set; }
 
         public int ClienteId { get; private set; }
         public Cliente cliente { get; private set; }

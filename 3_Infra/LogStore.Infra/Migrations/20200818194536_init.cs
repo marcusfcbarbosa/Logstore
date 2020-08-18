@@ -24,6 +24,22 @@ namespace Logstore.Infra.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Produto",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    identifyer = table.Column<string>(nullable: true, defaultValueSql: "lower(hex(randomblob(16)))"),
+                    CreatedAt = table.Column<DateTime>(nullable: false),
+                    Descricao = table.Column<string>(maxLength: 100, nullable: true),
+                    Valor = table.Column<decimal>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Produto", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Pedido",
                 columns: table => new
                 {
@@ -32,6 +48,7 @@ namespace Logstore.Infra.Migrations
                     identifyer = table.Column<string>(nullable: true, defaultValueSql: "lower(hex(randomblob(16)))"),
                     CreatedAt = table.Column<DateTime>(nullable: false),
                     Quantidade = table.Column<int>(nullable: false),
+                    ValorPedido = table.Column<decimal>(nullable: false),
                     FreteGratis = table.Column<bool>(nullable: false),
                     status = table.Column<byte>(nullable: false),
                     ClienteId = table.Column<int>(nullable: false)
@@ -48,26 +65,31 @@ namespace Logstore.Infra.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Produto",
+                name: "ProdutoPedido",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     identifyer = table.Column<string>(nullable: true, defaultValueSql: "lower(hex(randomblob(16)))"),
                     CreatedAt = table.Column<DateTime>(nullable: false),
-                    Descricao = table.Column<string>(maxLength: 100, nullable: true),
-                    Valor = table.Column<decimal>(nullable: false),
-                    PedidoId = table.Column<int>(nullable: true)
+                    ProdutoId = table.Column<int>(nullable: false),
+                    PedidoId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Produto", x => x.Id);
+                    table.PrimaryKey("PK_ProdutoPedido", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Produto_Pedido_PedidoId",
+                        name: "FK_ProdutoPedido_Pedido_PedidoId",
                         column: x => x.PedidoId,
                         principalTable: "Pedido",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_ProdutoPedido_Produto_ProdutoId",
+                        column: x => x.ProdutoId,
+                        principalTable: "Produto",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
@@ -76,18 +98,26 @@ namespace Logstore.Infra.Migrations
                 column: "ClienteId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Produto_PedidoId",
-                table: "Produto",
+                name: "IX_ProdutoPedido_PedidoId",
+                table: "ProdutoPedido",
                 column: "PedidoId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ProdutoPedido_ProdutoId",
+                table: "ProdutoPedido",
+                column: "ProdutoId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Produto");
+                name: "ProdutoPedido");
 
             migrationBuilder.DropTable(
                 name: "Pedido");
+
+            migrationBuilder.DropTable(
+                name: "Produto");
 
             migrationBuilder.DropTable(
                 name: "Cliente");

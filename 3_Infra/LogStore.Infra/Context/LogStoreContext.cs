@@ -12,9 +12,12 @@ namespace Logstore.Infra.Context
             : base(options)
         {
         }
+
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Produto> Produtos { get; set; }
         public DbSet<Pedido> Pedidos { get; set; }
+        public DbSet<ProdutoPedido> ProdutoPedidos { get; set; }
+        
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
@@ -52,31 +55,6 @@ namespace Logstore.Infra.Context
                                .HasMaxLength(50).
                                HasColumnName("Email");
 
-
-                        //    entity.Property(e => e.endereco.Cep)
-                        //    .HasMaxLength(11)
-                        //    .HasColumnName("Cep");
-
-                        //    entity.Property(e => e.endereco.Cidade)
-                        //    .HasMaxLength(50)
-                        //    .HasColumnName("Cidade");
-
-                        //    entity.Property(e => e.endereco.Estado)
-                        //        .HasMaxLength(50)
-                        //    .HasColumnName("Estado");
-
-                        //    entity.Property(e => e.endereco.Numero)
-                        //        .HasMaxLength(5)
-                        //    .HasColumnName("Numero");
-
-                        //    entity.Property(e => e.endereco.Pais)
-                        //        .HasMaxLength(20)
-                        //    .HasColumnName("Pais");
-
-                        //    entity.Property(e => e.endereco.Rua)
-                        //        .HasMaxLength(50)
-                        //    .HasColumnName("Rua");
-
                        });
 
 
@@ -104,6 +82,26 @@ namespace Logstore.Infra.Context
                 entity.HasOne(p => p.cliente)
                                .WithMany(p => p.Pedidos)
                                .HasForeignKey(bc => bc.ClienteId);
+            });
+
+            modelBuilder.Entity<ProdutoPedido>(entity =>
+            {
+                entity.ToTable("ProdutoPedido")
+                .HasKey(e => e.Id);
+
+                entity.Property(e => e.identifyer).HasDefaultValueSql("lower(hex(randomblob(16)))");
+
+                entity.HasOne(p => p.pedido)
+                               .WithMany(p => p.ProdutoPedidos)
+                               .HasForeignKey(bc => bc.PedidoId);
+
+                entity.HasOne(p => p.produto)
+                               .WithMany(p => p.ProdutoPedidos)
+                               .HasForeignKey(bc => bc.ProdutoId);
+                
+                entity.Property(e => e.QuantidadeProduto)
+                    .IsRequired().
+                    HasColumnName("QuantidadeProduto");
             });
         }
     }
