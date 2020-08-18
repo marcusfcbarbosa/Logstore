@@ -18,10 +18,7 @@ namespace Logstore.Infra.Context
             modelBuilder.Ignore<Notifiable>();
             modelBuilder.Ignore<Notification>();
             modelBuilder.Ignore<Email>();
-
-
             base.OnModelCreating(modelBuilder);
-
         }
 
         private void EntityMapping(ModelBuilder modelBuilder)
@@ -41,7 +38,6 @@ namespace Logstore.Infra.Context
                                .IsRequired()
                                .HasMaxLength(50).
                                HasColumnName("Email");
-
 
 
                            entity.Property(e => e.endereco.Cep)
