@@ -50,3 +50,8 @@ C:\Users\dev\Logstore\1_Api\LogStorage.WebApi\bin\Debug\netcoreapp3.0\Logstore.D
 C:\Users\dev\Logstore\1_Api\LogStorage.WebApi\bin\Debug\netcoreapp3.0\Logstore.Infra.pdb
 C:\Users\dev\Logstore\1_Api\LogStorage.WebApi\bin\Debug\netcoreapp3.0\Logstore.Shared.pdb
 C:\Users\dev\Logstore\1_api\LogStorage.WebApi\bin\Debug\netcoreapp3.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\dev\Logstore\1_Api\LogStorage.WebApi\bin\Debug\netcoreapp3.0\Microsoft.OpenApi.dll
+C:\Users\dev\Logstore\1_Api\LogStorage.WebApi\bin\Debug\netcoreapp3.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\dev\Logstore\1_Api\LogStorage.WebApi\bin\Debug\netcoreapp3.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\dev\Logstore\1_Api\LogStorage.WebApi\bin\Debug\netcoreapp3.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\dev\Logstore\1_Api\LogStorage.WebApi\obj\Debug\netcoreapp3.0\LogStorage.WebApi.MvcApplicationPartsAssemblyInfo.cs
