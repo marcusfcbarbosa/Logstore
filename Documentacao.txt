@@ -1,0 +1,31 @@
+Olá =)
+
+Segue a aplicação
+https://github.com/marcusfcbarbosa/Logstore
+
+Para executar a aplicação entre no caminho :
+Logstore\1_Api\LogStorage.WebApi> 
+
+execute o comando : dotnet run
+
+e use a URL: http://localhost:5000/swagger/index.html
+====================================================================================================
+Então, vou explicar o formato que usei para montar a aplicação.
+
+Criei com base em principios SOLID, trabalhando em cima de CQRS
+Common Query Responsibility Segregation
+Fiz uso de :
+
+Entity Framework
+CodeFirst
+Migrations
+Bounded Contexts
+
+Trabalhei com SQlIte, porém esse banco é muito limitado, como por exemplo nao da suporte para GUID
+
+
+Vocês poderam ver que segui uma linha similar com alguns projetos em meu repositório:
+Exemplo
+https://github.com/marcusfcbarbosa/_NetCore
+
+
