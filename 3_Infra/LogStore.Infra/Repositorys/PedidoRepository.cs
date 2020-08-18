@@ -16,12 +16,12 @@ namespace Logstore.Infra.Repositorys
             _context = context;
         }
 
-        public async Task<List<Pedido>> BuscaPedidosPorCliente(string email)
+        public List<Pedido> BuscaPedidosPorCliente(string email)
         {
             IQueryable<Pedido> query = _context.Pedidos
             .Include(c=>c.cliente)
             .Where(c=>c.cliente.Email== email);
-            return await query.ToListAsync();
+            return  query.ToList();
         }
     }
 }

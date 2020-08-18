@@ -5,6 +5,6 @@ namespace Logstore.Domain.LogStoreContext.Repositories.Interfaces
 {
     public interface IClienteRepository : IBaseRepository<Cliente>
     {
-         Task<Cliente> RetornaClientePorEmail(string email);
+         Cliente RetornaClientePorEmail(string email);
     }
 }

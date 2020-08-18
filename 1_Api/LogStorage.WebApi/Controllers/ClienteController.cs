@@ -1,5 +1,7 @@
+using System;
 using System.Threading.Tasks;
 using Logstore.Domain.LogStoreContext.Commands.Inputs;
+using Logstore.Domain.LogStoreContext.Commands.Outputs;
 using Logstore.Domain.LogStoreContext.Handlers;
 using Logstore.Shared.Commands;
 using Microsoft.AspNetCore.Http;
@@ -20,7 +22,14 @@ namespace LogStorage.WebApi.Controllers
         [HttpPost("")]
         public ICommandResult Post([FromBody] CriaClienteCommand command)
         {
-            return _clienteHandler.Handle(command);
+            try
+            {
+                return _clienteHandler.Handle(command);
+            }
+            catch (Exception ex)
+            {
+                return new CommandResult(false, ex.Message, StatusCodes.Status500InternalServerError);
+            }
         }
     }
 }

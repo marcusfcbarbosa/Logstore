@@ -15,11 +15,11 @@ namespace Logstore.Infra.Repositorys
             _context = context;
         }
 
-        public async Task<Cliente> RetornaClientePorEmail(string email)
+        public Cliente RetornaClientePorEmail(string email)
         {
             IQueryable<Cliente> query = _context.Clientes
             .Where(p => p.Email == email);
-            return await query.FirstOrDefaultAsync();
+            return  query.FirstOrDefault();
         }
     }
 }

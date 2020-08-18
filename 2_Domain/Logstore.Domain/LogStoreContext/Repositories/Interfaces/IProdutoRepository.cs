@@ -5,6 +5,6 @@ namespace Logstore.Domain.LogStoreContext.Repositories.Interfaces
 {
     public interface IProdutoRepository : IBaseRepository<Produto>
     {
-            Task<Produto> RetornaProdutoPelaDescricao(string descricao);
+            Produto RetornaProdutoPelaDescricao(string descricao);
     }
 }

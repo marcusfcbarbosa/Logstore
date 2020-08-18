@@ -14,11 +14,11 @@ namespace Logstore.Infra.Repositorys
         {
             _context = context;
         }
-        public async Task<Produto> RetornaProdutoPelaDescricao(string descricao)
+        public Produto RetornaProdutoPelaDescricao(string descricao)
         {
             IQueryable<Produto> query = _context.Produtos
             .Where(p => p.Descricao == descricao);
-            return await query.FirstOrDefaultAsync();
+            return  query.FirstOrDefault();
         }
     }
 }
