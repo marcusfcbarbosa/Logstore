@@ -9,4 +9,3 @@ C:\Users\dev\Logstore\2_Domain\Logstore.Domain\obj\Debug\netstandard2.0\Logstore
 C:\Users\dev\Logstore\2_Domain\Logstore.Domain\bin\Debug\netstandard2.0\Logstore.Shared.dll
 C:\Users\dev\Logstore\2_Domain\Logstore.Domain\bin\Debug\netstandard2.0\Logstore.Shared.pdb
 C:\Users\dev\Logstore\2_Domain\Logstore.Domain\obj\Debug\netstandard2.0\Logstore.Domain.csproj.CopyComplete
-C:\Users\dev\Logstore\2_Domain\Logstore.Domain\obj\Debug\netstandard2.0\Logstore.Domain.csproj.CoreCompileInputs.cache

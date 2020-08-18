@@ -4102,11 +4102,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\dev\\Logstore\\3_Infra\\Logstore.Infra\\Logstore.Infra.csproj",
+      "projectUniqueName": "C:\\Users\\dev\\Logstore\\3_Infra\\Logstore.Infra\\Logstore.Infra.csproj",
       "projectName": "Logstore.Infra",
-      "projectPath": "c:\\Users\\dev\\Logstore\\3_Infra\\Logstore.Infra\\Logstore.Infra.csproj",
+      "projectPath": "C:\\Users\\dev\\Logstore\\3_Infra\\Logstore.Infra\\Logstore.Infra.csproj",
       "packagesPath": "C:\\Users\\Marcus\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\dev\\Logstore\\3_Infra\\Logstore.Infra\\obj\\",
+      "outputPath": "C:\\Users\\dev\\Logstore\\3_Infra\\Logstore.Infra\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -4125,8 +4125,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "c:\\Users\\dev\\Logstore\\2_Domain\\Logstore.Domain\\Logstore.Domain.csproj": {
-              "projectPath": "c:\\Users\\dev\\Logstore\\2_Domain\\Logstore.Domain\\Logstore.Domain.csproj"
+            "C:\\Users\\dev\\Logstore\\2_Domain\\Logstore.Domain\\Logstore.Domain.csproj": {
+              "projectPath": "C:\\Users\\dev\\Logstore\\2_Domain\\Logstore.Domain\\Logstore.Domain.csproj"
             }
           }
         }

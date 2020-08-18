@@ -5,5 +5,4 @@ C:\Users\dev\Logstore\4_SHared\Logstore.Shared\obj\Debug\netstandard2.0\Logstore
 C:\Users\dev\Logstore\4_SHared\Logstore.Shared\obj\Debug\netstandard2.0\Logstore.Shared.AssemblyInfo.cs
 C:\Users\dev\Logstore\4_SHared\Logstore.Shared\obj\Debug\netstandard2.0\Logstore.Shared.dll
 C:\Users\dev\Logstore\4_SHared\Logstore.Shared\obj\Debug\netstandard2.0\Logstore.Shared.pdb
-C:\Users\dev\Logstore\4_SHared\Logstore.Shared\obj\Debug\netstandard2.0\Logstore.Shared.csproj.CoreCompileInputs.cache
 C:\Users\dev\Logstore\4_SHared\Logstore.Shared\obj\Debug\netstandard2.0\Logstore.Shared.csprojAssemblyReference.cache

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\dev\\Logstore\\4_SHared\\Logstore.Shared\\Logstore.Shared.csproj": {}
+    "C:\\Users\\dev\\Logstore\\4_SHared\\Logstore.Shared\\Logstore.Shared.csproj": {}
   },
   "projects": {
-    "c:\\Users\\dev\\Logstore\\4_SHared\\Logstore.Shared\\Logstore.Shared.csproj": {
+    "C:\\Users\\dev\\Logstore\\4_SHared\\Logstore.Shared\\Logstore.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\dev\\Logstore\\4_SHared\\Logstore.Shared\\Logstore.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\dev\\Logstore\\4_SHared\\Logstore.Shared\\Logstore.Shared.csproj",
         "projectName": "Logstore.Shared",
-        "projectPath": "c:\\Users\\dev\\Logstore\\4_SHared\\Logstore.Shared\\Logstore.Shared.csproj",
+        "projectPath": "C:\\Users\\dev\\Logstore\\4_SHared\\Logstore.Shared\\Logstore.Shared.csproj",
         "packagesPath": "C:\\Users\\Marcus\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\dev\\Logstore\\4_SHared\\Logstore.Shared\\obj\\",
+        "outputPath": "C:\\Users\\dev\\Logstore\\4_SHared\\Logstore.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

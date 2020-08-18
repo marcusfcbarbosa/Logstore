@@ -17,7 +17,6 @@ using Microsoft.Extensions.Logging;
 using Logstore.Infra.Repositorys;
 using LogStorage.WebApi.InfraEstructure;
 
-
 namespace LogStorage.WebApi
 {
     public class Startup
@@ -35,6 +34,18 @@ namespace LogStorage.WebApi
             services.AddDbContext<LogStoreContext>(x => x.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
             registrandoDependencias(services);
             services.AddControllers();
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy",
+                    builder => builder.AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader());
+            });
+
+            DocumentacaoApi(services);
+
+
         }
         public void DocumentacaoApi(IServiceCollection services)
         {
@@ -77,7 +88,7 @@ namespace LogStorage.WebApi
             {
                 app.UseDeveloperExceptionPage();
             }
-            
+
 
             //app.UseHttpsRedirection();
 
@@ -92,7 +103,8 @@ namespace LogStorage.WebApi
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "swagger");
             });
 
-           app.UseCors(x => x.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod().AllowCredentials());
+
+            app.UseCors("CorsPolicy");
 
             app.UseEndpoints(endpoints =>
             {

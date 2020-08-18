@@ -2622,11 +2622,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\dev\\Logstore\\2_Domain\\Logstore.Domain\\Logstore.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\dev\\Logstore\\2_Domain\\Logstore.Domain\\Logstore.Domain.csproj",
       "projectName": "Logstore.Domain",
-      "projectPath": "c:\\Users\\dev\\Logstore\\2_Domain\\Logstore.Domain\\Logstore.Domain.csproj",
+      "projectPath": "C:\\Users\\dev\\Logstore\\2_Domain\\Logstore.Domain\\Logstore.Domain.csproj",
       "packagesPath": "C:\\Users\\Marcus\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\dev\\Logstore\\2_Domain\\Logstore.Domain\\obj\\",
+      "outputPath": "C:\\Users\\dev\\Logstore\\2_Domain\\Logstore.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -2645,8 +2645,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "c:\\Users\\dev\\Logstore\\4_SHared\\Logstore.Shared\\Logstore.Shared.csproj": {
-              "projectPath": "c:\\Users\\dev\\Logstore\\4_SHared\\Logstore.Shared\\Logstore.Shared.csproj"
+            "C:\\Users\\dev\\Logstore\\4_SHared\\Logstore.Shared\\Logstore.Shared.csproj": {
+              "projectPath": "C:\\Users\\dev\\Logstore\\4_SHared\\Logstore.Shared\\Logstore.Shared.csproj"
             }
           }
         }
