@@ -8,11 +8,10 @@ namespace Logstore.Domain.LogStoreContext.Entities
     {
 
         private Pedido(){}
-        public Pedido(Cliente cliente, int quantidade, Status status)
+        public Pedido(Cliente cliente, int quantidade)
         {
             this.cliente = cliente;
             this.Quantidade = quantidade;
-            this.status = status;
         }
 
         public void PedidoRealizado()

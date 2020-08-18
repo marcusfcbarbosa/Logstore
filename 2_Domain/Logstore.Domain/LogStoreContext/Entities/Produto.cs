@@ -16,7 +16,6 @@ namespace Logstore.Domain.LogStoreContext.Entities
         }
         public string Descricao { get; private set; }
         public decimal Valor { get; private set; }
-
         public int PedidoId { get; private set; }
         public Pedido pedido { get; private set; }
     }
