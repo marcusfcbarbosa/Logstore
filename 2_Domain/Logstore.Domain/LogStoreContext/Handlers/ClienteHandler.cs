@@ -9,7 +9,6 @@ namespace Logstore.Domain.LogStoreContext.Handlers
     ICommandHandler<CriaClienteCommand>
     {
         private readonly IClienteRepository _clienteRepository;
-
         public ClienteHandler(IClienteRepository clienteRepository)
         {
             _clienteRepository = clienteRepository;

@@ -16,7 +16,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Logstore.Infra.Repositorys;
 using LogStorage.WebApi.InfraEstructure;
-//using Swashbuckle.AspNetCore.Swagger;
+
 
 namespace LogStorage.WebApi
 {
@@ -41,7 +41,6 @@ namespace LogStorage.WebApi
 
             services.AddSwaggerGen(options =>
             {
-                options.DescribeAllEnumsAsStrings();
                 options.DescribeAllParametersInCamelCase();
                 options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "Docs", Version = "v1" });
 
@@ -78,12 +77,9 @@ namespace LogStorage.WebApi
             {
                 app.UseDeveloperExceptionPage();
             }
-            else
-            {
-                app.UseHsts();
-            }
+            
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
             app.UseRouting();
 
@@ -96,8 +92,7 @@ namespace LogStorage.WebApi
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "swagger");
             });
 
-            //app.UseHttpsRedirection();
-            app.UseCors(x => x.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod().AllowCredentials());
+           app.UseCors(x => x.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod().AllowCredentials());
 
             app.UseEndpoints(endpoints =>
             {

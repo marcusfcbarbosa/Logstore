@@ -6163,11 +6163,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dev\\Logstore\\1_Api\\LogStorage.WebApi\\LogStorage.WebApi.csproj",
+      "projectUniqueName": "c:\\Users\\dev\\Logstore\\1_Api\\LogStorage.WebApi\\LogStorage.WebApi.csproj",
       "projectName": "LogStorage.WebApi",
-      "projectPath": "C:\\Users\\dev\\Logstore\\1_Api\\LogStorage.WebApi\\LogStorage.WebApi.csproj",
+      "projectPath": "c:\\Users\\dev\\Logstore\\1_Api\\LogStorage.WebApi\\LogStorage.WebApi.csproj",
       "packagesPath": "C:\\Users\\Marcus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dev\\Logstore\\1_Api\\LogStorage.WebApi\\obj\\",
+      "outputPath": "c:\\Users\\dev\\Logstore\\1_Api\\LogStorage.WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -6186,11 +6186,11 @@
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
-            "C:\\Users\\dev\\Logstore\\2_Domain\\Logstore.Domain\\Logstore.Domain.csproj": {
-              "projectPath": "C:\\Users\\dev\\Logstore\\2_Domain\\Logstore.Domain\\Logstore.Domain.csproj"
+            "c:\\Users\\dev\\Logstore\\2_Domain\\Logstore.Domain\\Logstore.Domain.csproj": {
+              "projectPath": "c:\\Users\\dev\\Logstore\\2_Domain\\Logstore.Domain\\Logstore.Domain.csproj"
             },
-            "C:\\Users\\dev\\Logstore\\3_Infra\\Logstore.Infra\\Logstore.Infra.csproj": {
-              "projectPath": "C:\\Users\\dev\\Logstore\\3_Infra\\Logstore.Infra\\Logstore.Infra.csproj"
+            "c:\\Users\\dev\\Logstore\\3_Infra\\Logstore.Infra\\Logstore.Infra.csproj": {
+              "projectPath": "c:\\Users\\dev\\Logstore\\3_Infra\\Logstore.Infra\\Logstore.Infra.csproj"
             }
           }
         }
