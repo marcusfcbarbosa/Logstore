@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Logstore.Domain.LogStoreContext.ValueObjects.Enums;
 using Logstore.Shared.Entities;
 
@@ -6,10 +7,9 @@ namespace Logstore.Domain.LogStoreContext.Entities
     public class Pedido : Entity
     {
 
-        public Pedido(Cliente cliente, Produto produto, int quantidade, Status status)
+        public Pedido(Cliente cliente, int quantidade, Status status)
         {
             this.cliente = cliente;
-            this.produto = produto;
             this.Quantidade = quantidade;
             this.status = status;
         }
@@ -18,10 +18,12 @@ namespace Logstore.Domain.LogStoreContext.Entities
         {
             this.status = Status.Realizado;
         }
-        public Cliente cliente { get; private set; }
-        public Produto produto { get; private set; }
         public int Quantidade { get; private set; }
+        public bool FreteGratis { get; private set; } = false;
         public Status status { get; private set; }
+        public List<Produto> Produtos { get; set; }
 
+        public int ClienteId { get; private set; }
+        public Cliente cliente { get; private set; }
     }
 }

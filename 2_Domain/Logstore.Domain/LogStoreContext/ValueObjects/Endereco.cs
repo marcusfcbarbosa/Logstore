@@ -1,4 +1,5 @@
 using System;
+using Logstore.Domain.LogStoreContext.Entities;
 using Logstore.Domain.ValueObjects;
 
 
@@ -6,24 +7,20 @@ namespace Logstore.Domain.LogStoreContext.ValueObjects
 {
     public class Endereco : ValueObject
     {
-        public Endereco(String street, String number, String neighborhood, String city, String state, String country, String zipCode)
+        public Endereco( String rua, String numero, String cidade, String estado, String pais, String cep)
         {
-            this.Street = street;
-            this.Number = number;
-            this.Neighborhood = neighborhood;
-            this.City = city;
-            this.State = state;
-            this.Country = country;
-            this.ZipCode = zipCode;
-
+            this.Rua = rua;
+            this.Numero = numero;
+            this.Cidade = cidade;
+            this.Estado = estado;
+            this.Pais = pais;
+            this.Cep = cep;
         }
-        public String Street { get; private set; }
-        public String Number { get; private set; }
-        public String Neighborhood { get; private set; }
-        public String City { get; private set; }
-        public String State { get; private set; }
-        public String Country { get; private set; }
-        public String ZipCode { get; private set; }
-
+        public String Rua { get; private set; }
+        public String Numero { get; private set; }
+        public String Cidade { get; private set; }
+        public String Estado { get; private set; }
+        public String Pais { get; private set; }
+        public String Cep { get; private set; }
     }
 }
