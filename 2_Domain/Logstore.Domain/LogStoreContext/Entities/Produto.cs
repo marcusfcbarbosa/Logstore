@@ -11,12 +11,8 @@ namespace Logstore.Domain.LogStoreContext.Entities
             this.Descricao = descricao;
             this.Valor = valor;
         }
-        public void VinculaPedido(Pedido pedido){
-                this.pedido = pedido;
-        }
+        
         public string Descricao { get; private set; }
         public decimal Valor { get; private set; }
-        public int PedidoId { get; private set; }
-        public Pedido pedido { get; private set; }
     }
 }

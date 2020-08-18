@@ -20,7 +20,6 @@ namespace Logstore.Domain.LogStoreContext.Handlers
         public ICommandResult Handle(CriaClienteCommand command)
         {
             command.Validate();
-
             if (!command.Valid)
             {
                 return new CommandResult(false, "Campos enviados com erro", Notifications);

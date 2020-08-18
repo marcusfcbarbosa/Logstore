@@ -92,10 +92,6 @@ namespace Logstore.Infra.Context
                 entity.Property(e => e.Valor)
                     .IsRequired().
                     HasColumnName("Valor");
-
-                entity.HasOne(p => p.pedido)
-                               .WithMany(p => p.Produtos)
-                               .HasForeignKey(bc => bc.PedidoId);
             });
 
             modelBuilder.Entity<Pedido>(entity =>

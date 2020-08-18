@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Logstore.Infra.Migrations
 {
     [DbContext(typeof(LogStoreContext))]
-    [Migration("20200818135813_init")]
+    [Migration("20200818184136_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -79,7 +79,7 @@ namespace Logstore.Infra.Migrations
                     b.Property<string>("Descricao")
                         .HasMaxLength(100);
 
-                    b.Property<int>("PedidoId");
+                    b.Property<int?>("PedidoId");
 
                     b.Property<decimal>("Valor")
                         .HasColumnName("Valor");
@@ -105,10 +105,9 @@ namespace Logstore.Infra.Migrations
 
             modelBuilder.Entity("Logstore.Domain.LogStoreContext.Entities.Produto", b =>
                 {
-                    b.HasOne("Logstore.Domain.LogStoreContext.Entities.Pedido", "pedido")
+                    b.HasOne("Logstore.Domain.LogStoreContext.Entities.Pedido")
                         .WithMany("Produtos")
-                        .HasForeignKey("PedidoId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("PedidoId");
                 });
 #pragma warning restore 612, 618
         }

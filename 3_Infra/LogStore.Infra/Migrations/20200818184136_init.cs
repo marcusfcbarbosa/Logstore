@@ -57,7 +57,7 @@ namespace Logstore.Infra.Migrations
                     CreatedAt = table.Column<DateTime>(nullable: false),
                     Descricao = table.Column<string>(maxLength: 100, nullable: true),
                     Valor = table.Column<decimal>(nullable: false),
-                    PedidoId = table.Column<int>(nullable: false)
+                    PedidoId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -67,7 +67,7 @@ namespace Logstore.Infra.Migrations
                         column: x => x.PedidoId,
                         principalTable: "Pedido",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
