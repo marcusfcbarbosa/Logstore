@@ -7,18 +7,31 @@ namespace Logstore.Infra.Context
 {
     public class LogStoreContext : DbContext
     {
-
+        public LogStoreContext(){}
         public LogStoreContext(DbContextOptions<LogStoreContext> options)
             : base(options)
         {
         }
+        public DbSet<Cliente> Clientes { get; set; }
+        public DbSet<Produto> Produtos { get; set; }
+        public DbSet<Pedido> Pedidos { get; set; }
 
+        protected override void OnConfiguring(DbContextOptionsBuilder options)
+        {
+            if (!options.IsConfigured)
+            {
+                options.UseSqlite("Data Source=LogStore.DB");
+            }
+        }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(LogStoreContext).Assembly);
             modelBuilder.Ignore<Notifiable>();
             modelBuilder.Ignore<Notification>();
             modelBuilder.Ignore<Email>();
+            modelBuilder.Ignore<Endereco>();
             base.OnModelCreating(modelBuilder);
+            EntityMapping(modelBuilder);
         }
 
         private void EntityMapping(ModelBuilder modelBuilder)
@@ -40,29 +53,29 @@ namespace Logstore.Infra.Context
                                HasColumnName("Email");
 
 
-                           entity.Property(e => e.endereco.Cep)
-                           .HasMaxLength(11)
-                           .HasColumnName("Cep");
+                        //    entity.Property(e => e.endereco.Cep)
+                        //    .HasMaxLength(11)
+                        //    .HasColumnName("Cep");
 
-                           entity.Property(e => e.endereco.Cidade)
-                           .HasMaxLength(50)
-                           .HasColumnName("Cidade");
+                        //    entity.Property(e => e.endereco.Cidade)
+                        //    .HasMaxLength(50)
+                        //    .HasColumnName("Cidade");
 
-                           entity.Property(e => e.endereco.Estado)
-                               .HasMaxLength(50)
-                           .HasColumnName("Estado");
+                        //    entity.Property(e => e.endereco.Estado)
+                        //        .HasMaxLength(50)
+                        //    .HasColumnName("Estado");
 
-                           entity.Property(e => e.endereco.Numero)
-                               .HasMaxLength(5)
-                           .HasColumnName("Numero");
+                        //    entity.Property(e => e.endereco.Numero)
+                        //        .HasMaxLength(5)
+                        //    .HasColumnName("Numero");
 
-                           entity.Property(e => e.endereco.Pais)
-                               .HasMaxLength(20)
-                           .HasColumnName("Pais");
+                        //    entity.Property(e => e.endereco.Pais)
+                        //        .HasMaxLength(20)
+                        //    .HasColumnName("Pais");
 
-                           entity.Property(e => e.endereco.Rua)
-                               .HasMaxLength(50)
-                           .HasColumnName("Rua");
+                        //    entity.Property(e => e.endereco.Rua)
+                        //        .HasMaxLength(50)
+                        //    .HasColumnName("Rua");
 
                        });
 

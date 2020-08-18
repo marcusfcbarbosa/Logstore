@@ -7,6 +7,7 @@ namespace Logstore.Domain.LogStoreContext.Entities
     public class Pedido : Entity
     {
 
+        private Pedido(){}
         public Pedido(Cliente cliente, int quantidade, Status status)
         {
             this.cliente = cliente;

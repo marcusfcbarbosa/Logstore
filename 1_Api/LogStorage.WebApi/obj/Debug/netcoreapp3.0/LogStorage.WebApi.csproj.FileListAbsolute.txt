@@ -49,3 +49,4 @@ C:\Users\dev\Logstore\1_Api\LogStorage.WebApi\bin\Debug\netcoreapp3.0\Logstore.S
 C:\Users\dev\Logstore\1_Api\LogStorage.WebApi\bin\Debug\netcoreapp3.0\Logstore.Domain.pdb
 C:\Users\dev\Logstore\1_Api\LogStorage.WebApi\bin\Debug\netcoreapp3.0\Logstore.Infra.pdb
 C:\Users\dev\Logstore\1_Api\LogStorage.WebApi\bin\Debug\netcoreapp3.0\Logstore.Shared.pdb
+C:\Users\dev\Logstore\1_api\LogStorage.WebApi\bin\Debug\netcoreapp3.0\Microsoft.EntityFrameworkCore.Design.dll

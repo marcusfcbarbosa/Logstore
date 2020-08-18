@@ -5,7 +5,7 @@ namespace Logstore.Domain.LogStoreContext.Entities
 {
     public class Produto : Entity
     {
-
+        private Produto(){}
         public Produto(string descricao, decimal valor)
         {
             this.Descricao = descricao;
