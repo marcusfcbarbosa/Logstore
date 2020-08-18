@@ -42,10 +42,7 @@ namespace LogStorage.WebApi
                         .AllowAnyMethod()
                         .AllowAnyHeader());
             });
-
             DocumentacaoApi(services);
-
-
         }
         public void DocumentacaoApi(IServiceCollection services)
         {
