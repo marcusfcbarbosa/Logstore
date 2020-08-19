@@ -35,5 +35,22 @@ namespace LogStorage.WebApi.Controllers
                 return new CommandResult(false, ex.Message, StatusCodes.Status500InternalServerError);
             }
         }
+
+        [HttpGet("")]
+        public ICommandResult Get()
+        {
+            try
+            {
+                var produtos = _produtoRepository.RetornaTodosProdutos();
+                return new CommandResult(true, "", produtos);
+            }
+            catch (Exception ex)
+            {
+                return new CommandResult(false, ex.Message, StatusCodes.Status500InternalServerError);
+            }
+        }
+
+
+
     }
 }

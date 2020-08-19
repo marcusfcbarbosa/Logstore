@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Logstore.Domain.LogStoreContext.Entities;
@@ -20,6 +21,11 @@ namespace Logstore.Infra.Repositorys
             IQueryable<Cliente> query = _context.Clientes
             .Where(p => p.Email == email);
             return  query.FirstOrDefault();
+        }
+
+        public List<Cliente> RetornaTodosClientes()
+        {
+            return _context.Clientes.ToList();
         }
     }
 }

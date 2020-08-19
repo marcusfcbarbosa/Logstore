@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Logstore.Domain.LogStoreContext.Entities;
@@ -19,6 +20,11 @@ namespace Logstore.Infra.Repositorys
             IQueryable<Produto> query = _context.Produtos
             .Where(p => p.Descricao == descricao);
             return  query.FirstOrDefault();
+        }
+
+        public List<Produto> RetornaTodosProdutos()
+        {
+            return _context.Produtos.ToList();
         }
     }
 }
