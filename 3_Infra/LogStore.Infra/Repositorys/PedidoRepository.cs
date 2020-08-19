@@ -18,10 +18,9 @@ namespace Logstore.Infra.Repositorys
 
         public List<Pedido> BuscaPedidosPorCliente(string email)
         {
-            IQueryable<Pedido> query = _context.Pedidos
-            .Include(c=>c.cliente)
-            .Where(c=>c.cliente.Email== email);
-            return  query.ToList();
+            IQueryable<Pedido> query = _context.Pedidos.
+            Include(c => c.cliente).Include(pp => pp.ProdutoPedidos).Where(c => c.cliente.Email == email);
+            return query.ToList();
         }
     }
 }

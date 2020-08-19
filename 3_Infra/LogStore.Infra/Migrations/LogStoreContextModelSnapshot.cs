@@ -52,8 +52,6 @@ namespace Logstore.Infra.Migrations
 
                     b.Property<bool>("FreteGratis");
 
-                    b.Property<int>("Quantidade");
-
                     b.Property<decimal>("ValorPedido");
 
                     b.Property<string>("identifyer")

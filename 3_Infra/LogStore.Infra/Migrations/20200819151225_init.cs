@@ -47,7 +47,6 @@ namespace Logstore.Infra.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     identifyer = table.Column<string>(nullable: true, defaultValueSql: "lower(hex(randomblob(16)))"),
                     CreatedAt = table.Column<DateTime>(nullable: false),
-                    Quantidade = table.Column<int>(nullable: false),
                     ValorPedido = table.Column<decimal>(nullable: false),
                     FreteGratis = table.Column<bool>(nullable: false),
                     status = table.Column<byte>(nullable: false),
@@ -72,6 +71,7 @@ namespace Logstore.Infra.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     identifyer = table.Column<string>(nullable: true, defaultValueSql: "lower(hex(randomblob(16)))"),
                     CreatedAt = table.Column<DateTime>(nullable: false),
+                    QuantidadeProduto = table.Column<int>(nullable: false),
                     ProdutoId = table.Column<int>(nullable: false),
                     PedidoId = table.Column<int>(nullable: false)
                 },

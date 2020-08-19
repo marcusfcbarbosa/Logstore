@@ -72,6 +72,7 @@ namespace LogStorage.WebApi
             #region"Repositórios"
             services.AddScoped<IPedidoRepository, PedidoRepository>();
             services.AddScoped<IProdutoRepository, ProdutoRepository>();
+            services.AddScoped<IProdutoPedidoRepository, ProdutoPedidoRepository>();
             services.AddScoped<IClienteRepository, ClienteRepository>();
 
             services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));

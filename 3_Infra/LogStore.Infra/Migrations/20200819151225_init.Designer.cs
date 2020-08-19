@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Logstore.Infra.Migrations
 {
     [DbContext(typeof(LogStoreContext))]
-    [Migration("20200818194536_init")]
+    [Migration("20200819151225_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -53,8 +53,6 @@ namespace Logstore.Infra.Migrations
                     b.Property<DateTime>("CreatedAt");
 
                     b.Property<bool>("FreteGratis");
-
-                    b.Property<int>("Quantidade");
 
                     b.Property<decimal>("ValorPedido");
 
@@ -103,6 +101,9 @@ namespace Logstore.Infra.Migrations
                     b.Property<int>("PedidoId");
 
                     b.Property<int>("ProdutoId");
+
+                    b.Property<int>("QuantidadeProduto")
+                        .HasColumnName("QuantidadeProduto");
 
                     b.Property<string>("identifyer")
                         .ValueGeneratedOnAdd()

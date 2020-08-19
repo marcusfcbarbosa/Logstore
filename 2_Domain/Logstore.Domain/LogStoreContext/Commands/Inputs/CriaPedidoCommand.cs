@@ -18,7 +18,7 @@ namespace Logstore.Domain.LogStoreContext.Commands.Inputs
                  .Requires()
                  .IsNotNull(NomeCliente, "NomeCliente", "NomeCliente é obrigatório")
                  .IsNotNull(EmailCliente, "EmailCliente", "EmailCliente é obrigatório")
-                 .IsLowerThan(lista.Count(),0,"","Necessita informar quantidade do pedido")
+                 
              );
         }
     }

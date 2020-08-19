@@ -7,22 +7,19 @@ namespace Logstore.Domain.LogStoreContext.Entities
     public class Pedido : Entity
     {
 
-        private Pedido() { }
+        private Pedido() { 
+            this.ProdutoPedidos = new List<ProdutoPedido>();
+        }
         public Pedido(Cliente cliente)
         {
             this.cliente = cliente;
+            this.ProdutoPedidos = new List<ProdutoPedido>();
         }
 
         public void PedidoRealizado()
         {
             this.status = Status.Realizado;
         }
-        public void AdicionaProdutosAoPedido(Produto produto, int quantidade)
-        {
-            var produtoPedido = new ProdutoPedido(produto, quantidade, this);
-            this.ProdutoPedidos.Add(produtoPedido);
-        }
-
 
         public void EhFreteGrtis()
         {
@@ -33,8 +30,8 @@ namespace Logstore.Domain.LogStoreContext.Entities
 
         public void AdicionValorPedido(decimal valorPedido)
         {
-                this.ValorPedido = valorPedido;
-        }   
+            this.ValorPedido = valorPedido;
+        }
 
         public bool FreteGratis { get; private set; } = false;
         public Status status { get; private set; }
