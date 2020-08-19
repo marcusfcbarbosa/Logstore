@@ -1,5 +1,6 @@
 using System;
 using System.Threading.Tasks;
+using Logstore.Domain.LogStoreContext.Adapters;
 using Logstore.Domain.LogStoreContext.Commands.Inputs;
 using Logstore.Domain.LogStoreContext.Commands.Outputs;
 using Logstore.Domain.LogStoreContext.Handlers;
@@ -16,7 +17,7 @@ namespace LogStorage.WebApi.Controllers
     {
         private readonly ClienteHandler _clienteHandler;
         private readonly IClienteRepository _clienteRepository;
-        public ClienteController(ClienteHandler clienteHandler,IClienteRepository clienteRepository)
+        public ClienteController(ClienteHandler clienteHandler, IClienteRepository clienteRepository)
         {
             _clienteHandler = clienteHandler;
             _clienteRepository = clienteRepository;
@@ -40,7 +41,7 @@ namespace LogStorage.WebApi.Controllers
         {
             try
             {
-                var clientes = _clienteRepository.RetornaTodosClientes();
+                var clientes = ClienteAdapter.DomainToViewModel(_clienteRepository.RetornaTodosClientes());
                 return new CommandResult(true, "", clientes);
             }
             catch (Exception ex)

@@ -1,4 +1,5 @@
 using System;
+using Logstore.Domain.LogStoreContext.Adapters;
 using Logstore.Domain.LogStoreContext.Commands.Inputs;
 using Logstore.Domain.LogStoreContext.Commands.Outputs;
 using Logstore.Domain.LogStoreContext.Handlers;
@@ -41,7 +42,7 @@ namespace LogStorage.WebApi.Controllers
         {
             try
             {
-                var produtos = _produtoRepository.RetornaTodosProdutos();
+                var produtos = ProdutoAdapter.DomainToViewModel(_produtoRepository.RetornaTodosProdutos());
                 return new CommandResult(true, "", produtos);
             }
             catch (Exception ex)

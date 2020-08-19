@@ -14,15 +14,29 @@ Então, vou explicar o formato que usei para montar a aplicação.
 
 Criei com base em principios SOLID, trabalhando em cima de CQRS
 Common Query Responsibility Segregation
+
+Em virtude disso todo caso de uso esta contido nos "Handlers".
+
+====================================================================================================
 Fiz uso de :
 
 Entity Framework
 CodeFirst
 Migrations
 Bounded Contexts
+ORM (porém em meu repositório tem exemplos de Dapper tbm)
 
 Trabalhei com SQlIte, porém esse banco é muito limitado, como por exemplo nao da suporte para GUID
 
+Por padrão, todas as Entidades herdam de Entity que junto vem um IDENTIFCADOR e um ID 
+IDENTIFCADOR = GUID(No caso estou usando um binario pois SQLite nao da suporte para GUID), muito usado para requisições GET
+porém não é aconselhavel para scripts, em base relacional, numero sequencial se mostrou maior desempenho nos Joins
+=========================================
+Não uso AutoMapper, reflexion conforme a carga de dados que trafega se mostrou ser realmente lenta.
+Em virtude disso faço uso de classes estáticas que pode ser muito bem visto na controller.
+
+
+=========================================
 
 Vocês poderam ver que segui uma linha similar com alguns projetos em meu repositório:
 Exemplo
