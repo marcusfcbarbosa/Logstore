@@ -30,7 +30,7 @@ namespace Logstore.Domain.LogStoreContext.Handlers
             command.Validate();
             if (!command.Valid)
             {
-                return new CommandResult(false, "Campos enviados com erro", Notifications);
+                return new CommandResult(false, "Campos enviados com erro", command.Notifications);
             }
             var cliente = _clienteRepository.RetornaClientePorEmail(command.EmailCliente);
             if (cliente == null)

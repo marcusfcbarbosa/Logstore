@@ -23,6 +23,7 @@ namespace Logstore.Domain.LogStoreContext.Commands.Inputs
                  .Requires()
                  .IsNotNull(Nome, "Nome", "Nome é obrigatório")
                  .IsNotNull(Email, "Email", "Email é obrigatório")
+                 .IsEmail(Email,"","E-mail inválido")
              );
         }
     }

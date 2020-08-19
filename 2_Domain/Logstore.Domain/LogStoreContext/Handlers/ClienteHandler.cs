@@ -22,7 +22,7 @@ namespace Logstore.Domain.LogStoreContext.Handlers
             command.Validate();
             if (!command.Valid)
             {
-                return new CommandResult(false, "Campos enviados com erro", Notifications);
+                return new CommandResult(false, "Campos enviados com erro", command.Notifications);
             }
             var email = new Email(command.Email);
             var cliente = new Cliente(command.Nome, email);
